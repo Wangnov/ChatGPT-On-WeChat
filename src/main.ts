@@ -29,9 +29,10 @@ async function main() {
     .on("message", async (message: any) => {
       try {
         console.log(`📨 ${message}`);
+        console.log(message.from);
         // add your own task handlers over here to expand the bot ability!
         // e.g. if a message starts with "Hello", the bot sends "World!"
-        if (message.text().startsWith("Hello")) {
+        if (message.text.startsWith("Hello")) {
           await message.say("World!");
           return;
         }
